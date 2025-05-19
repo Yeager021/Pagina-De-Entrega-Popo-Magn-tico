@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carregando...</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .message {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      width: 80%;
+      background-color: #444;
+      border-radius: 25px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background-color: #00ff00;
+      animation: fill 3s forwards;
+    }
+
+    @keyframes fill {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+
+  <!-- Pixel do Facebook -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){
+        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '685666144186750');
+    fbq('track', 'Purchase');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=685666144186750&ev=Purchase&noscript=1"/>
+  </noscript>
+
+  <!-- Redirecionamento após 3 segundos -->
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://drive.google.com/file/d/1wUQsWVI4ECZ1aYTbdG3LO-60KP0YiKOW/view";
+    }, 3000);
+  </script>
+</head>
+<body>
+  <div class="message">Carregando Seu Acesso...</div>
+  <div class="progress-bar">
+    <div class="progress-bar-fill"></div>
+  </div>
+</body>
+</html>
